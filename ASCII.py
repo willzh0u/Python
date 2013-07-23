@@ -1,0 +1,11 @@
+
+print "this is\b\b\b\b\b\b\b\b and cram"
+print "tbfgjkbfbmfgb\\vwevbe"
+print "vbrbfgbfbdr\'verbrbetbrbeb\'bbrdbrsbtse"
+print "getssetesbtbrstbes\rvesrbdbrt"
+print "this is a \r test"
+print "the ocean is \r blue"
+print "it's a really \n nice day outside"
+print "oh my \v god"
+print "this is so amazing\fright?"
+print "grass is \f green"

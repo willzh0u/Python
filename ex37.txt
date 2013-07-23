@@ -1,0 +1,314 @@
+ex37
+
+
+Python Key Words
+
+compound statements = if, while, for, try, with statements.
+(Operators are defined here; http://www.tutorialspoint.com/python/python_basic_operators.htm)
+Logical Operators = and, or, not
+Membership Operators = in, not in, 
+Identity Operators = is, not is
+(Exceptions are defined here; http://www.tutorialspoint.com/python/python_exceptions.htm)
+Exceptions = except clause with NO exceptions, except clause with MULTIPLE exceptions, try-finally clause, raising (raise) an exception, user-defined exceptions, 
+
+
+and - called logical AND operator.  If both the operands are true then the condition becomes true (a and b is true); remember truth table; (true and true = true)
+
+del - (statement) to remove an item from a list given its index instead of its value.
+	ex. a = [1, 2, 3, 4, 5]
+		del a[0]
+		a = [2, 3, 4, 5]
+
+from
+not
+while
+as
+
+elif - the elif statement allows you to check multiple expressions for truth value and execute a block of code as soon as one of the conditions evaluates to true.  Unlike an if/else statement, else statements can have at most one statement.  There can be an arbitrary number of elif statements following an if.
+
+global - Variables that are defined inside a function body have a local scope, and those defined outside have a global scope. (Modules) are = http://docs.python.org/2/tutorial/modules.html (http://www.tutorialspoint.com/python/python_functions.htm)
+
+or - called Logical OR operator.  If any of the 2 operands are non zero then the condition becomes true.  (a or b) is true; remember truth table; (false or false = false)
+
+with - ie - With can be used so to open a file, process its contents, and make sure to close it, we can use the function below. (http://effbot.org/zone/python-with-statement.htm)
+
+	with open("x.txt") as f:
+    data = f.read()
+    do something with data
+
+assert - An assertion is a condition/statement that we're caliming should be true at this point in the program.  It summarizes the state of the program's variables.  Assertions can help explain the relationships among variables, review what has happened so far in the program.  When a program is correct, all of the assertions are true no matter what inputs are provided.  When a program has an error, at least one assertion winds up false for some conbination of inputs and the statement raises an AssertionError exception. (http://www.linuxtopia.org/online_books/programming_books/python_programming/python_ch07s05.html)
+
+
+else statement- is the condition executed if the original condition is false.  In an if-else statement exactly one of 2 possible indented blocks is executed.  (http://anh.cs.luc.edu/python/hands-on/3.1/handsonHtml/ifstatements.html)
+
+if statement - pretty much like English.  if is the first condition executed.  If it's true, it will pass to the result of the if.  If first condition is false in an if-else statement, else statement will be executed next.
+
+pass - pass statement does nothing.  Sometimes we need a placeholder to fill the syntactic requirements of a compound staement.  We use the pass statement to fill in the required suite of statements.
+
+Here's an example of using the pass statement.  Pass statements can be a handy reminder of places where a program can be expanded.
+
+if n%2 == 0:
+    pass # Ignore even values
+else:
+    count += 1 # Count the odd values
+
+yield - is a keyword that is used like "return", except the function will return a generator.  http://stackoverflow.com/questions/231767/the-python-yield-keyword-explained
+		
+break - break & continue statement breaks out of the smallest enclosing for or while loop. (http://docs.python.org/2/tutorial/controlflow.html) the Break clause used in 4.4.  The break clause belongs to the for loop, not the if statement. The break statement terminates the current loop and resumes the execution at the next statement.  The most common use for break is when some external condition is triggered requiring a hasty exit from a loop.  break statements can b eused in both while and for loops. (http://www.tutorialspoint.com/python/python_loop_control.htm)   **In my words, I think of break as in, stop and print this once you've found the answer (usually triggered/intro by an if statement)
+
+continue - The continue statement, continues with the next iteration of the loop.  The continue statement returns the control of the while loop.  It rejects all the remaining statements in the current iteration of the loop and moves the control back to the top of the loop. (http://www.tutorialspoint.com/python/python_loop_control.htm) ** In my words, conditions are introduced and will print certain things.  Adding the "continue" clause will ask re-run the condition for "all the other criterias." Look at article above for an example. 
+
+except - there are 2 types of except clauses; with no excetions and with multiple exceptions.
+
+import - importing a features from a module
+
+print - print statement is used as general syntax to print usually a string.
+
+class - user-defined prototype for an object that defines a set of attributes that characterize any object of the class.  The attributes are data membera (class variables and instance variables) and methods, accessed via dot notation.
+exec
+
+in - Evaluates to true if it finds a variable in the specified sequence and false otherwise. (ie.  x in y, here in results in a 1 if x is a member of sequence y)
+
+raise - exception is the type of exception (for example, NameError) and argument is a value for the exception argument.  The argument is optional; if not supplied, the exception argument is None.  The final argument, traceback, is also optional (and rarely used in practice), and, if present, is the traceback object used for the exception.
+
+ie
+
+def functionName( level ):
+   if level < 1:
+      raise "Invalid level!", level
+      # The code below to this would not be executed
+      # if we raise the exception
+
+
+finally - You can use a finally block to ensure that code is always executed, or one of more except blocks to catch specific exceptions.  You don't combine both except blcoks and a finally block, because generating the right bytecode for the combined version was complicated and it wasn't clear what the semantics of the combined statements should be. http://docs.python.org/2/whatsnew/2.5.html
+		ex - try:
+				block-1 ...
+			except Exception1:
+				handler-1 ...
+			except Exception2:
+				handler-2 ...
+			else:
+				else-block
+			finally:
+				final-block
+The code in block-1 is executed.  If the code raises an exception, the various except blocks are tested:  if the exception is of class Exception1, handler-1 is executed; otherwise if it's of class Exception2, handler-2 is executed, and so forth.  If no exception is raised, the else-block is executed.
+
+No matter what happened previously, the final-block is executed once the code block is complete and any raised exceptions handled.  Even if there's an error in an exception handler or the else-block and a new exception is raised, the code in the final block is still run. (add example code below)
+
+is - 
+
+return - return statement exists a function, optionally passing back an expression tothe caller.  A return statement with no arguments is the same as return None.  
+
+# Function definition is here
+def sum( arg1, arg2 ):
+   # Add both the parameters and return them."
+   total = arg1 + arg2
+   print "Inside the function : ", total
+   return total;
+
+
+
+
+def - def command defines a function.
+
+for - example below:
+
+	for letter in 'Python':     # First Example
+   		print 'Current Letter :', letter
+
+	fruits = ['banana', 'apple',  'mango']
+	for fruit in fruits:        # Second Example
+  		 print 'Current fruit :', fruit
+
+		print "Good bye!"
+
+	***print output***
+	Current Letter : P
+	Current Letter : y
+	Current Letter : t
+	Current Letter : h
+	Current Letter : o
+	Current Letter : n
+	Current fruit : banana
+	Current fruit : apple
+	Current fruit : mango
+	Good bye!
+
+lambda - an anonymous function - a function which doesn't have a name, and is used in-line, in other words you can assign an identifier to a lambda function in a single expression.
+	ex  addTwo = lambda x: x+2
+		addTwo(2) = 4
+
+try - try specified exception handlers and/or cleanup code for a group of statements.  Instead of getting an exception error, try statements will translate the exception something you want thats easier to understand. http://www.youtube.com/watch?v=I72Ds_N2BV4
+
+
+Data Types (defined here: http://zetcode.com/lang/python/datatypes/)
+
+True & False - boolean datatype is a primitive datatype having one of two values: true or False.  This is a fundamental data type.  Very common in programs.
+
+None - This data type means non existent, not known or empty. The function does nothing.  It does not explicitly return any value.  
+
+	# None.py
+
+	def function():
+   		pass
+
+	print function()
+
+strings - represents textual data in computer programs.  Strings can be created using single quotes, double quotes, and triple quotes.  When we use triple quotes, strings can span several lines without using the escape character.
+
+	# strings.py
+
+	a = "proximity alert"
+	b = 'evacuation'
+	c = """
+	requiem 
+	for
+	a 
+	tower
+	"""
+
+	print a
+	print b
+	print c
+
+	***print output***
+
+	$ ./strings.py 
+	proximity alert
+	evacuation
+
+	requiem 
+	for 
+	a 
+	tower
+
+numbers - In python, we have integer numbers, floating point numbers, and complex numbers. 
+	1)	If we work with integers, we deal with discrete entities.  We would use integers to count apples.
+
+	# apples.py
+
+	# number of baskets
+	baskets = 16
+
+	# number of apples in a basket
+	apples_in_basket = 24
+
+	# we get the total number of apples
+	total = baskets * apples_in_basket
+
+
+	print "There are total of", total, "apples"
+
+
+	2) If we use point numbers, it will represent real numbres in computing.  Real numbers measure continuous quantities.  (floating defined below)
+
+
+floats - floating point argument will be truncated towards zero.  
+
+	# sprinter.py
+
+	# 100m is 0.1 km
+
+	distance = 0.1
+
+	# 9.87s is 9.87/60*60 h
+
+	time = 9.87 / 3600
+
+	speed = distance / time
+
+	print "The average speed of" \
+     	 " a sprinter is " , speed, "km/h"
+
+    to get the speed, we divide the distance by the time.
+
+    print "The average speed of" \
+      " a sprinter is " , speed, "km/h"
+
+     The \ character is called an escape character. The escape character changes the meaning of the new line character. We see the code in two lines, but the interpreter drops the new line character, and sees only one line. Without the escape character, the interpreter would complain about indentation.
+
+	$ ./sprinter.py 
+	The average speed of a sprinter is  36.4741641337 km/h
+
+	This is the output of the sprinter script. 36.4741641337 is a floating point number.
+
+
+
+lists - is a mutable sequence data type.  The list can contain mixed data types.  A list and a tuple share many common features.  Beacuse a list is a modifiable data type, it has some additional operations.  The list is created using square brackets [].
+
+	num = [0, 2, 5, 4, 6, 7]
+
+	print num[0]
+	print num[2:]
+	print len(num)
+	print num + [8, 9]
+
+
+String Escapes Sequences
+(http://en.wikipedia.org/wiki/ASCII)
+(http://docs.python.org/release/2.5.2/ref/strings.html)
+
+\\ - Backlash (\)
+\' - Single quote (')
+\" - Double quote (")
+\a - ASCII Bell (BEL)
+\b - ASCII Backspace (BS)
+\f - ASCII formfeed (FF)
+\n - ASCII Linefeed (LF)
+\r - ASCII Carriage Return (CR)
+\t - ASCII Horizontal Tab (TAB)
+\v - ASCII Vertical (VT)
+
+String Formats
+
+%d - signed decimal integer
+%i - signed decimal integer
+%o - octal integer
+%u - unsigned decimal integer
+%x - hexadecimal integer (lower case)
+%X - hexadecimal integer (upper case)
+%e - exponential notation (with lowercase 'e')
+%E - exponential notation (with uppercase 'E')
+%f - floating point real number
+%F
+%g - the shorter of %f and %e
+%G - the shorter of %f and %E
+%c - character
+%r - 
+%s - string conversion via str() prior to formatting
+%% - leaves you with a single literal '%'
+
+
+Operators (http://www.tutorialspoint.com/python/python_basic_operators.htm)
+
++ - Addition - Adds values on either side of the operator
+- - Subtraction - Subtracts right hand operand from left hand operand
+* - Multiplication - Multiplies values on either side of the operator
+** Exponent - Performs exponential (power) calculation on operators
+/ - Division - Divides left hand operand by right hand operand  20/10 = 2
+// - Floor Division - The division of operands where the results is the quotient in which the digits after the decimal point are removed
+% - Modulus - Divides left hand operand by right hand operand and returns remainder
+< - Checks if the value of left operand is less than the value of the right operand, if yes then condition becomes true.  (10 < 20) is true.
+> - Checks if the value of left operand is greater than the value of the right operand.  If yes, condition becomes true (20 > 10) is not true.
+<= - Checks if the value of left operand is less than or equal to the value of right operand, is yes then condition becomes true (10 <= 20) is true.
+>= - Checks if the value of left operand is greater than or equal to the value of the right operand,m if yes then condition becomes true.  (10 >= 20) is not true
+== Checks if the value of 2 operands are equal or not.  If yes, the condition becomes true. (20 == 10) is not true.
+!= - Checks if the value of 2 operands are equal or not, if values are not equal then condition becomes true.  (10 != 20) is true.  
+<> - Checks if the value of 2 operands are equal or not, if values are not equal then condition becomes true. (a <> b) is true.  This is similar to !=operator.
+( ) - 
+[ ]
+{ }
+@
+,
+:
+.
+= - Simple assignment operator, Assigns values from right side operands to left side operand.  c=a + b will assigne value of a + b into c
+;
++= Add AND assignment operator, It subtracts right operand from th left operand and assign the result to the left operand c+=a is equivalent to c=c+a
+-= - Subtract AND assignment operator, It subtracts right operand from the left operand and assign the result to the left operand c -= a is equivalent to c=c-a
+*= - Multiply AND assignment operator, It multiplies right operand with the left operand and assign the result to the left operand. c*=a is equivalent to c=c*a
+/= - Divide AND assignment operator, It takes modulus using 2 operands and assign the result to left operand.  c%=a is equivalent to c=c%a
+//= - Floor Dividion and assigns a value, Performs floor division on operators and assign value to the left operand. c//=a is equivalent to c = c//a
+%= - Modulus AND assignment operator, it takes modulus using 2 operands and assign the result to operand. c % = a is equivalent to c = c%a
+**= - Exponent AND assignment operator, Performs exponential (power) calculation on operators and assign value to the left operand. c** = a is equivalent to c = c**a
+if & else operators - http://www.linuxtopia.org/online_books/programming_books/python_programming/python_ch07s06.html

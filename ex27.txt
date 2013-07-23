@@ -1,0 +1,2 @@
+# Exercise is all about memorization of Python logic!
+# no computations in this exercise
